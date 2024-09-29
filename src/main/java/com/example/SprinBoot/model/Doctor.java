@@ -14,11 +14,11 @@ import lombok.Data;
 @Entity
 @Data
 
-public class Usuario {
+public class Doctor {
     
     @Id
     @Column
-    private long iduser;
+    private long idDoctor;
     
     @Column
     private String nombre;
@@ -29,9 +29,16 @@ public class Usuario {
     @Column
     private String correo;
 
+    @Column
+    private String Especialidad;
 
-    public Long getIduser() {
-        return iduser;
+
+    public String apellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public String correo() {
@@ -42,20 +49,20 @@ public class Usuario {
         this.correo = correo;
     }
 
-    public String apellido() {
-        return apellido;
+    public String Especialidad() {
+        return Especialidad;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setEspecialidad(String especialidad) {
+        Especialidad = especialidad;
     }
 
-    public long iduser() {
-        return iduser;
+    public long idDoctor() {
+        return idDoctor;
     }
 
-    public void setIduser(long iduser) {
-        this.iduser = iduser;
+    public void setIdDoctor(long idDoctor) {
+        this.idDoctor = idDoctor;
     }
 
     public String nombre() {
@@ -65,8 +72,9 @@ public class Usuario {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+}
 
 //
 
 
-}
+
