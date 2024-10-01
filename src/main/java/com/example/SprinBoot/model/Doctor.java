@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Data;
+import org.antlr.v4.runtime.misc.NotNull;
 
 /**
  *
@@ -13,23 +14,24 @@ import lombok.Data;
 
 @Entity
 @Data
-
+//entidad doctor
 public class Doctor {
     
     @Id
-    @Column
+    @Column(nullable = false)
     private long idDoctor;
     
-    @Column
+    @Column(nullable = false,length=50)
+
     private String nombre;
     
-    @Column
+    @Column(nullable = false,length=50)
     private String apellido;
     
-    @Column
+    @Column(nullable = false,length=50)
     private String correo;
 
-    @Column
+    @Column(nullable = false,length=50)
     private String Especialidad;
 
 
